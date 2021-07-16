@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
+import COUNTRY from './components/Country/COUNTRY';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
         <h1>County : {countries.length}</h1>
         <ul>
           {
-            countries.map(country=> <li>{country.name}</li>)
+            countries.map(country=> <COUNTRY country={country} key={country.alpha3Code}></COUNTRY>)
           }
         </ul>
         <img src={logo} className="App-logo" alt="logo" />
